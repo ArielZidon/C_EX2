@@ -68,7 +68,7 @@ void algo(int arr[N][N])
             for (size_t j = 0; j < N; j++)
             {
                 int ij = 0;
-                if (i == j)
+                if (i == j) 
                 {
                     arr[i][j] = 0;
                 }
@@ -77,18 +77,8 @@ void algo(int arr[N][N])
                 }
                 else{
                     int temp = 0;
-                    if(arr[i][k]==0 ||  arr[k][j]==0){
-                        temp = 99999999;
-                    }
-                    else{
-                        temp = arr[i][k] + arr[k][j];
-                    }
-                    if(arr[i][j]==0){
-                        ij=99999999;
-                    }
-                    else{
-                        ij = arr[i][j];
-                    }
+                    (arr[i][k]==0 ||  arr[k][j]==0) ? (temp = INT_MAX) :  (temp = arr[i][k] + arr[k][j]);
+                    (arr[i][j]==0) ? (ij = INT_MAX) : (ij = arr[i][j]);
                     arr[i][j] = ((ij>temp) ? temp : arr[i][j] );
                 }
             }
