@@ -10,7 +10,6 @@
 //         printf("D to exit the program.\n \n");
 // }
 
-
 void A(int mat[N][N]){
 
     for(size_t i=0 ; i<N ; ++i)
